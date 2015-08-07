@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'modificar.html' /}
+
+<h1> MODIFICACION</h1>
+
+<form action="#}"  method="POST" >
+		<b> Nombre:</b><br>
+		<input type="text" name="nombre"  value="${grupoModificar.nombre}" class="form-control" 
+		required placeholder="Ingrese nombre" >
+		
+		
+		
+		<b> Descripcion:</b>
+		<input type="text" name="descripcion"  value="${grupoModificar.descripcion}"  class="form-control"
+		 required placeholder="ingrese una descripcion">
+		<br>
+		
+		
+		<input type="submit"  value="guardar"  class="btn btn-primary btn-block">
+
+</form>

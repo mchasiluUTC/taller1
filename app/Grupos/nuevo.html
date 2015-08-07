@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Nuevo Grupo</h1>
+
+<form action="@{Grupos.guardar}" method="post">
+	<b>Nombre</b><br>
+	<input type="text" name="nombre"  >
+	
+	<b>Descripcion</b><br>
+	<input type="text" name="descripcion"  >
+	
+	
+		<select name="idGrupo" required="required">
+			<option>Elija</option>
+			#{List items:grupos, as: 'grupo'}
+					<option value="${grupo.id}">${grupo.nombre}</option>
+			#{/List}
+			
+			
+			
+			</select>
+
+	<input type="submit" name="Guardar"  >
+	
+	
+</form>
+
+</body>
+</html>

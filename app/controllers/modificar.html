@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Nuevo Grupo</h1>
+
+<form action="@{Grupos.modificar}" method="post">
+	<b>Nombre</b><br>
+	<input type="text" name="nombre" value="${grupoModificar.nombre}" >
+	
+	<b>Descripcion</b><br>
+	<input type="text" name="descripcion"  value="${grupoModificar.descripcion}">
+
+	<input type="submit" name="Guardar"  >
+	
+	<input type="submit" name="Modificar"  >
+</form>
+
+</body>
+</html>

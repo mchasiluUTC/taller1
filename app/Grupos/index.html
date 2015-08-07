@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+<h1>No se que puso</h1>
+
+<a href="/grupos/nuevo">Nuevo</a>
+
+#{if grupos}
+#{list :itemsgrupos: 'grupo'}
+
+	Nombre: #{grupo.nombre}
+	Grupo: #{grupo.descripcion}
+	<a href="@{Grupo.eliminar(grupo.id)}" onclick="return confirm('Esta se seguro que quiere Elininar');">Eliminar</a>
+	
+<a href=""></a>
+	
+ #{/list}
+ 
+ #{/if}
+ 
+ 
+ #{else}
+ <div>Aun no tienes </div>
+ 
+ #{/else}
